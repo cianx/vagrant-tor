@@ -17,5 +17,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, '--audio', 'dsound', '--audiocontroller', 'ac97']
   end
 
+  config.vm.synced_folder File.expand_path('~'), "/home/vagrant/home"
   config.ssh.forward_agent = true
 end
